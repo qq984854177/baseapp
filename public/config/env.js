@@ -1,10 +1,10 @@
 window.env = {
     api: {
-        authUrl: 'http://localhost:9002/api/v2/barong',
-        tradeUrl: 'http://localhost:9002/api/v2/peatio',
-        applogicUrl: 'http://localhost:9002/api/v2/applogic',
-        rangerUrl: 'ws://localhost:9003/api/v2/ranger',
-        finexUrl: '',
+        authUrl: 'https://dev.yellow.openware.work/api/v2/barong',
+        tradeUrl: 'https://dev.yellow.openware.work/api/v2/peatio',
+        applogicUrl: 'https://dev.yellow.openware.work/api/v2/applogic',
+        rangerUrl: 'wss://dev.yellow.openware.work/api/v2/ranger',
+        finexUrl: 'https://dev.yellow.openware.work/api/v2/finex',
     },
     minutesUntilAutoLogout: '5',
     withCredentials: false,
@@ -19,4 +19,5 @@ window.env = {
     sessionCheckInterval: '15000',
     balancesFetchInterval: '3000',
     passwordEntropyStep: 14,
+    sentryEnabled: false,
 };

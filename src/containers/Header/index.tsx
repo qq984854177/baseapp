@@ -3,6 +3,7 @@ import * as React from 'react';
 import { InjectedIntlProps, injectIntl } from 'react-intl';
 import { connect, MapDispatchToPropsFunction } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { showLanding } from '../../api';
 import { LogoIcon } from '../../assets/images/LogoIcon';
 import {
     Market,
@@ -124,7 +125,7 @@ class Head extends React.Component<Props> {
 
     private redirectToLanding = () => {
         this.props.toggleSidebar(false);
-        this.props.history.push('/');
+        this.props.history.push(`${showLanding() ? '/' : '/trading'}`);
     };
 
     private openSidebar = () => this.props.toggleSidebar(!this.props.sidebarOpened);
